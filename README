@@ -1,0 +1,19 @@
+Instructions:
+To embed data in an image file:
+
+$ ./encode.py datafile image_in.png image_out.png
+
+This will embed datafile in image_in.png and write the result to image_out.png
+To debed (?) data in an image:
+
+$ ./decode.py image.png datafile
+
+This will decode the data previously hidden in image.png and write it to
+datafile.
+
+Written for Python 2.6. Requires Python Imaging Library. 
+Not tested for image formats other than PNG (not tested very much at all, tbh).
+Any kind of data should be okay.
+Will probably not work for formats with lossy compression.
+
+This is not an encryption. It is merely hiding the data in plain sight.
