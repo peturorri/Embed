@@ -61,7 +61,11 @@ if __name__ == '__main__':
 
     data_str = open(data_name, 'rb').read()
     data_bytes = map(lambda x:ord(x), data_str)
-    image = Image.open(in_name)
+    try:
+      image = Image.open(in_name)
+    except Exception as e:
+      print e
+      sys.exit(1)
 
     result = encode(data_bytes, image)
 
